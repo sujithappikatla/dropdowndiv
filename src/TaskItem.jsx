@@ -27,7 +27,7 @@ function TaskItem(props) {
       <Paper
         sx={{
           padding: 1,
-          border:TaskEnabled ? "1px solid #0000ff": "1px solid #888888",
+          border:TaskEnabled ? "1px solid #ab47bc": "1px solid #888888",
           background:TaskEnabled?"#ffffff":"#eeeeee"
         }}
         elevation={TaskEnabled ? 3 : 1}
@@ -35,13 +35,14 @@ function TaskItem(props) {
         <Stack direction={"row"} spacing={2}>
             <Switch sx={{
                 marginTop:1
-            }} size="medium" onChange={handleTaskEnabled} checked={TaskEnabled} ></Switch>
+            }} size="medium" onChange={handleTaskEnabled} checked={TaskEnabled} color={"secondary"} ></Switch>
           <TextField
             disabled={true}
             id="outlined-basic"
             size="small"
             label="Task Name"
             variant="standard"
+            color="secondary"
             value={TaskName}
             onChange={(e) => {
                 setTaskName(e.target.value);
@@ -53,6 +54,7 @@ function TaskItem(props) {
             size="small"
             label="Task Command"
             variant="standard"
+            color="secondary"
             value={TaskCommand}
             onChange={(e) => {
                 setTaskCommand(e.target.value);
@@ -64,6 +66,7 @@ function TaskItem(props) {
             size="small"
             label="Task Interval"
             variant="standard"
+            color="secondary"
             value={TaskInterval}
             onChange={
                 (e) => setTaskInterval(e.target.value)

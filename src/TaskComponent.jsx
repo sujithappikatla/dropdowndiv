@@ -46,6 +46,7 @@ function TaskComponent(props) {
                       size="medium"
                       checked={Enabled}
                       onChange={handleEnabled}
+                      color={"secondary"}
                     />
                   }
                   label={props.name}
@@ -61,6 +62,7 @@ function TaskComponent(props) {
                   variant="outlined"
                   value={GlobalInterval}
                   onChange={(e)=> setGlobalInterval(e.target.value)}
+                  color={"secondary"}
                 />
               </Stack>
             </Grid>
@@ -68,7 +70,7 @@ function TaskComponent(props) {
               <Button
                 disabled={Enabled ? false:true}
                 variant="outlined"
-                color="success"
+                color="secondary"
                 onClick={handleArrow}
                 endIcon={
                   Arrow ? (
