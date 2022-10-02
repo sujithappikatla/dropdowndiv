@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Paper } from "@mui/material";
+import TaskComponent from "./TaskComponent";
+
+
+const tasks = [{"taskName":"task 1","taskInterval":0, "taskCommand":"command_1" },
+ {"taskName":"task 2","taskInterval":5 ,"taskCommand":"command_2" }];
+
+
+ const tasks2 = [{"taskName":"task 1","taskInterval":0, "taskCommand":"command_1" },
+ {"taskName":"task 2","taskInterval":5 ,"taskCommand":"command_2" },
+ {"taskName":"task 2","taskInterval":5 ,"taskCommand":"command_2" },
+ {"taskName":"task 2","taskInterval":5 ,"taskCommand":"command_2" }];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <TaskComponent name="CPU Related Tasks" tasksArray={tasks}></TaskComponent>
+    <TaskComponent name="MEMORY Related Tasks" tasksArray={tasks2} ></TaskComponent>
+    <TaskComponent name="CPU Related Tasks" tasksArray={tasks}></TaskComponent>
+    <TaskComponent name="MEMORY Related Tasks" tasksArray={tasks2} ></TaskComponent>
+    <TaskComponent name="CPU Related Tasks" tasksArray={tasks}></TaskComponent>
+    <TaskComponent name="MEMORY Related Tasks" tasksArray={tasks2} ></TaskComponent>
+    </>
+    
   );
 }
 
